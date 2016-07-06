@@ -1,0 +1,280 @@
+____________________________
+int
+____________________________
+Variables:
+  d::Distributions.Beta{Float64}
+  p::Float64
+  xs::Int64
+  tol::Float64
+  T::TYPE{T}
+  #s8::Bool
+  x0::ANY
+  x::ANY
+  #s7::ANY
+  ##V#7077::Tuple{Type{Float64}}
+  ##fx#7078::Float64
+  ##fy#7079::Float64
+  ##fy#7080::Float64
+  ##fy#7081::Float64
+
+Body:
+  begin  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 34:
+      NewvarNode(symbol("#s8"))
+      NewvarNode(:x0)
+      GenSym(1) = (top(getfield))(d::Distributions.Beta{Float64},:α)::Float64
+      GenSym(2) = (top(getfield))(d::Distributions.Beta{Float64},:β)::Float64
+      GenSym(3) = (Distributions.promote_type)((Distributions._partype)(GenSym(1))::ANY,(Distributions._partype)(GenSym(2))::ANY)::TYPE{T}
+      T = (Base.promote_type)(GenSym(3),Float64)::TYPE{T} # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 35:
+      ##fx#7078 = (Base.box)(Float64,(Base.sitofp)(Float64,0))
+      unless (Base.box)(Base.Bool,(Base.or_int)((Base.lt_float)(##fx#7078::Float64,p::Float64)::Bool,(Base.box)(Base.Bool,(Base.and_int)((Base.eq_float)(##fx#7078::Float64,p::Float64)::Bool,(Base.box)(Base.Bool,(Base.or_int)((Base.eq_float)(##fx#7078::Float64,9.223372036854776e18)::Bool,(Base.slt_int)(0,(Base.box)(Int64,(Base.fptosi)(Int64,##fx#7078::Float64)))::Bool)))))) goto 0
+      ##fy#7079 = (Base.box)(Float64,(Base.sitofp)(Float64,1))
+      #s8 = (Base.box)(Base.Bool,(Base.or_int)((Base.lt_float)(p::Float64,##fy#7079::Float64)::Bool,(Base.box)(Base.Bool,(Base.and_int)((Base.box)(Base.Bool,(Base.and_int)((Base.eq_float)(p::Float64,##fy#7079::Float64)::Bool,(Base.lt_float)(##fy#7079::Float64,9.223372036854776e18)::Bool)),(Base.slt_int)((Base.box)(Int64,(Base.fptosi)(Int64,##fy#7079::Float64)),1)::Bool))))
+      goto 1
+      0: 
+      #s8 = false
+      1: 
+      unless #s8::Bool goto 8 # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 36:
+      x0 = call(T::TYPE{T},xs::Int64)::ANY # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 37:
+      NewvarNode(:x)
+      NewvarNode(symbol("#s7"))
+      unless true goto 3
+      4:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 38:
+      x = x0 + (p::Float64 - (Distributions.cdf)(d::Distributions.Beta{Float64},x0)::UNION{ABSTRACTARRAY{T,N},FLOAT64})::ANY / (Distributions.pdf)(d::Distributions.Beta{Float64},x0)::UNION{ABSTRACTARRAY{T,N},FLOAT64}::ANY::ANY # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 39:
+      #s7 = (Distributions.abs)(x - x0::ANY)::ANY >= (Distributions.max)((Distributions.abs)(x)::ANY,(Distributions.abs)(x0)::ANY)::ANY * tol::Float64::ANY::ANY
+      unless #s7 goto 6
+      goto 7
+      6: 
+      return x
+      7:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 40:
+      x0 = x
+      5: 
+      unless false goto 4
+      3: 
+      2: 
+      return
+      goto 11
+      8:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 42:
+      ##fy#7080 = (Base.box)(Float64,(Base.sitofp)(Float64,0))
+      unless (Base.box)(Base.Bool,(Base.and_int)((Base.box)(Base.Bool,(Base.and_int)((Base.eq_float)(p::Float64,##fy#7080::Float64)::Bool,(Base.ne_float)(##fy#7080::Float64,9.223372036854776e18)::Bool)),0 === (Base.box)(Int64,(Base.fptosi)(Int64,##fy#7080::Float64))::Bool)) goto 9 # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 43:
+      return call(T::TYPE{T},0.0)::ANY
+      goto 11
+      9:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 44:
+      ##fy#7081 = (Base.box)(Float64,(Base.sitofp)(Float64,1))
+      unless (Base.box)(Base.Bool,(Base.and_int)((Base.box)(Base.Bool,(Base.and_int)((Base.eq_float)(p::Float64,##fy#7081::Float64)::Bool,(Base.ne_float)(##fy#7081::Float64,9.223372036854776e18)::Bool)),1 === (Base.box)(Int64,(Base.fptosi)(Int64,##fy#7081::Float64))::Bool)) goto 10 # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 45:
+      return call(T::TYPE{T},1.0)::ANY
+      goto 11
+      10:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 47:
+      return call(T::TYPE{T},Distributions.NaN)::ANY
+      11: 
+  end::ANY
+
+____________________________
+float32
+____________________________
+Variables:
+  d::Distributions.Beta{Float64}
+  p::Float64
+  xs::Float32
+  tol::Float64
+  T::TYPE{T}
+  #s8::Bool
+  x0::ANY
+  x::ANY
+  #s7::ANY
+  ##V#7126::Tuple{Type{Float64}}
+  ##fx#7127::Float64
+  ##fy#7128::Float64
+  ##fy#7129::Float64
+  ##fy#7130::Float64
+
+Body:
+  begin  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 34:
+      NewvarNode(symbol("#s8"))
+      NewvarNode(:x0)
+      GenSym(1) = (top(getfield))(d::Distributions.Beta{Float64},:α)::Float64
+      GenSym(2) = (top(getfield))(d::Distributions.Beta{Float64},:β)::Float64
+      GenSym(3) = (Distributions.promote_type)((Distributions._partype)(GenSym(1))::ANY,(Distributions._partype)(GenSym(2))::ANY)::TYPE{T}
+      T = (Base.promote_type)(GenSym(3),Float64)::TYPE{T} # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 35:
+      ##fx#7127 = (Base.box)(Float64,(Base.sitofp)(Float64,0))
+      unless (Base.box)(Base.Bool,(Base.or_int)((Base.lt_float)(##fx#7127::Float64,p::Float64)::Bool,(Base.box)(Base.Bool,(Base.and_int)((Base.eq_float)(##fx#7127::Float64,p::Float64)::Bool,(Base.box)(Base.Bool,(Base.or_int)((Base.eq_float)(##fx#7127::Float64,9.223372036854776e18)::Bool,(Base.slt_int)(0,(Base.box)(Int64,(Base.fptosi)(Int64,##fx#7127::Float64)))::Bool)))))) goto 0
+      ##fy#7128 = (Base.box)(Float64,(Base.sitofp)(Float64,1))
+      #s8 = (Base.box)(Base.Bool,(Base.or_int)((Base.lt_float)(p::Float64,##fy#7128::Float64)::Bool,(Base.box)(Base.Bool,(Base.and_int)((Base.box)(Base.Bool,(Base.and_int)((Base.eq_float)(p::Float64,##fy#7128::Float64)::Bool,(Base.lt_float)(##fy#7128::Float64,9.223372036854776e18)::Bool)),(Base.slt_int)((Base.box)(Int64,(Base.fptosi)(Int64,##fy#7128::Float64)),1)::Bool))))
+      goto 1
+      0: 
+      #s8 = false
+      1: 
+      unless #s8::Bool goto 8 # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 36:
+      x0 = call(T::TYPE{T},xs::Float32)::ANY # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 37:
+      NewvarNode(:x)
+      NewvarNode(symbol("#s7"))
+      unless true goto 3
+      4:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 38:
+      x = x0 + (p::Float64 - (Distributions.cdf)(d::Distributions.Beta{Float64},x0)::UNION{ABSTRACTARRAY{T,N},FLOAT64})::ANY / (Distributions.pdf)(d::Distributions.Beta{Float64},x0)::UNION{ABSTRACTARRAY{T,N},FLOAT64}::ANY::ANY # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 39:
+      #s7 = (Distributions.abs)(x - x0::ANY)::ANY >= (Distributions.max)((Distributions.abs)(x)::ANY,(Distributions.abs)(x0)::ANY)::ANY * tol::Float64::ANY::ANY
+      unless #s7 goto 6
+      goto 7
+      6: 
+      return x
+      7:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 40:
+      x0 = x
+      5: 
+      unless false goto 4
+      3: 
+      2: 
+      return
+      goto 11
+      8:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 42:
+      ##fy#7129 = (Base.box)(Float64,(Base.sitofp)(Float64,0))
+      unless (Base.box)(Base.Bool,(Base.and_int)((Base.box)(Base.Bool,(Base.and_int)((Base.eq_float)(p::Float64,##fy#7129::Float64)::Bool,(Base.ne_float)(##fy#7129::Float64,9.223372036854776e18)::Bool)),0 === (Base.box)(Int64,(Base.fptosi)(Int64,##fy#7129::Float64))::Bool)) goto 9 # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 43:
+      return call(T::TYPE{T},0.0)::ANY
+      goto 11
+      9:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 44:
+      ##fy#7130 = (Base.box)(Float64,(Base.sitofp)(Float64,1))
+      unless (Base.box)(Base.Bool,(Base.and_int)((Base.box)(Base.Bool,(Base.and_int)((Base.eq_float)(p::Float64,##fy#7130::Float64)::Bool,(Base.ne_float)(##fy#7130::Float64,9.223372036854776e18)::Bool)),1 === (Base.box)(Int64,(Base.fptosi)(Int64,##fy#7130::Float64))::Bool)) goto 10 # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 45:
+      return call(T::TYPE{T},1.0)::ANY
+      goto 11
+      10:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 47:
+      return call(T::TYPE{T},Distributions.NaN)::ANY
+      11: 
+  end::ANY
+
+____________________________
+float64
+____________________________
+Variables:
+  d::Distributions.Beta{Float64}
+  p::Float64
+  xs::Float64
+  tol::Float64
+  T::TYPE{T}
+  #s8::Bool
+  x0::ANY
+  x::ANY
+  #s7::ANY
+  ##V#7133::Tuple{Type{Float64}}
+  ##fx#7134::Float64
+  ##fy#7135::Float64
+  ##fy#7136::Float64
+  ##fy#7137::Float64
+
+Body:
+  begin  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 34:
+      NewvarNode(symbol("#s8"))
+      NewvarNode(:x0)
+      GenSym(1) = (top(getfield))(d::Distributions.Beta{Float64},:α)::Float64
+      GenSym(2) = (top(getfield))(d::Distributions.Beta{Float64},:β)::Float64
+      GenSym(3) = (Distributions.promote_type)((Distributions._partype)(GenSym(1))::ANY,(Distributions._partype)(GenSym(2))::ANY)::TYPE{T}
+      T = (Base.promote_type)(GenSym(3),Float64)::TYPE{T} # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 35:
+      ##fx#7134 = (Base.box)(Float64,(Base.sitofp)(Float64,0))
+      unless (Base.box)(Base.Bool,(Base.or_int)((Base.lt_float)(##fx#7134::Float64,p::Float64)::Bool,(Base.box)(Base.Bool,(Base.and_int)((Base.eq_float)(##fx#7134::Float64,p::Float64)::Bool,(Base.box)(Base.Bool,(Base.or_int)((Base.eq_float)(##fx#7134::Float64,9.223372036854776e18)::Bool,(Base.slt_int)(0,(Base.box)(Int64,(Base.fptosi)(Int64,##fx#7134::Float64)))::Bool)))))) goto 0
+      ##fy#7135 = (Base.box)(Float64,(Base.sitofp)(Float64,1))
+      #s8 = (Base.box)(Base.Bool,(Base.or_int)((Base.lt_float)(p::Float64,##fy#7135::Float64)::Bool,(Base.box)(Base.Bool,(Base.and_int)((Base.box)(Base.Bool,(Base.and_int)((Base.eq_float)(p::Float64,##fy#7135::Float64)::Bool,(Base.lt_float)(##fy#7135::Float64,9.223372036854776e18)::Bool)),(Base.slt_int)((Base.box)(Int64,(Base.fptosi)(Int64,##fy#7135::Float64)),1)::Bool))))
+      goto 1
+      0: 
+      #s8 = false
+      1: 
+      unless #s8::Bool goto 8 # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 36:
+      x0 = call(T::TYPE{T},xs::Float64)::ANY # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 37:
+      NewvarNode(:x)
+      NewvarNode(symbol("#s7"))
+      unless true goto 3
+      4:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 38:
+      x = x0 + (p::Float64 - (Distributions.cdf)(d::Distributions.Beta{Float64},x0)::UNION{ABSTRACTARRAY{T,N},FLOAT64})::ANY / (Distributions.pdf)(d::Distributions.Beta{Float64},x0)::UNION{ABSTRACTARRAY{T,N},FLOAT64}::ANY::ANY # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 39:
+      #s7 = (Distributions.abs)(x - x0::ANY)::ANY >= (Distributions.max)((Distributions.abs)(x)::ANY,(Distributions.abs)(x0)::ANY)::ANY * tol::Float64::ANY::ANY
+      unless #s7 goto 6
+      goto 7
+      6: 
+      return x
+      7:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 40:
+      x0 = x
+      5: 
+      unless false goto 4
+      3: 
+      2: 
+      return
+      goto 11
+      8:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 42:
+      ##fy#7136 = (Base.box)(Float64,(Base.sitofp)(Float64,0))
+      unless (Base.box)(Base.Bool,(Base.and_int)((Base.box)(Base.Bool,(Base.and_int)((Base.eq_float)(p::Float64,##fy#7136::Float64)::Bool,(Base.ne_float)(##fy#7136::Float64,9.223372036854776e18)::Bool)),0 === (Base.box)(Int64,(Base.fptosi)(Int64,##fy#7136::Float64))::Bool)) goto 9 # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 43:
+      return call(T::TYPE{T},0.0)::ANY
+      goto 11
+      9:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 44:
+      ##fy#7137 = (Base.box)(Float64,(Base.sitofp)(Float64,1))
+      unless (Base.box)(Base.Bool,(Base.and_int)((Base.box)(Base.Bool,(Base.and_int)((Base.eq_float)(p::Float64,##fy#7137::Float64)::Bool,(Base.ne_float)(##fy#7137::Float64,9.223372036854776e18)::Bool)),1 === (Base.box)(Int64,(Base.fptosi)(Int64,##fy#7137::Float64))::Bool)) goto 10 # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 45:
+      return call(T::TYPE{T},1.0)::ANY
+      goto 11
+      10:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 47:
+      return call(T::TYPE{T},Distributions.NaN)::ANY
+      11: 
+  end::ANY
+
+____________________________
+dual
+____________________________
+Variables:
+  d::Distributions.Beta{Float64}
+  p::Float64
+  xs::ForwardDiff.Dual{0,Float64}
+  tol::Float64
+  T::TYPE{T}
+  #s8::Bool
+  x0::ANY
+  x::ANY
+  #s7::ANY
+  ##V#7140::Tuple{Type{Float64}}
+  ##fx#7141::Float64
+  ##fy#7142::Float64
+  ##fy#7143::Float64
+  ##fy#7144::Float64
+
+Body:
+  begin  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 34:
+      NewvarNode(symbol("#s8"))
+      NewvarNode(:x0)
+      GenSym(1) = (top(getfield))(d::Distributions.Beta{Float64},:α)::Float64
+      GenSym(2) = (top(getfield))(d::Distributions.Beta{Float64},:β)::Float64
+      GenSym(3) = (Distributions.promote_type)((Distributions._partype)(GenSym(1))::ANY,(Distributions._partype)(GenSym(2))::ANY)::TYPE{T}
+      T = (Base.promote_type)(GenSym(3),ForwardDiff.Dual{0,Float64})::TYPE{T} # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 35:
+      ##fx#7141 = (Base.box)(Float64,(Base.sitofp)(Float64,0))
+      unless (Base.box)(Base.Bool,(Base.or_int)((Base.lt_float)(##fx#7141::Float64,p::Float64)::Bool,(Base.box)(Base.Bool,(Base.and_int)((Base.eq_float)(##fx#7141::Float64,p::Float64)::Bool,(Base.box)(Base.Bool,(Base.or_int)((Base.eq_float)(##fx#7141::Float64,9.223372036854776e18)::Bool,(Base.slt_int)(0,(Base.box)(Int64,(Base.fptosi)(Int64,##fx#7141::Float64)))::Bool)))))) goto 0
+      ##fy#7142 = (Base.box)(Float64,(Base.sitofp)(Float64,1))
+      #s8 = (Base.box)(Base.Bool,(Base.or_int)((Base.lt_float)(p::Float64,##fy#7142::Float64)::Bool,(Base.box)(Base.Bool,(Base.and_int)((Base.box)(Base.Bool,(Base.and_int)((Base.eq_float)(p::Float64,##fy#7142::Float64)::Bool,(Base.lt_float)(##fy#7142::Float64,9.223372036854776e18)::Bool)),(Base.slt_int)((Base.box)(Int64,(Base.fptosi)(Int64,##fy#7142::Float64)),1)::Bool))))
+      goto 1
+      0: 
+      #s8 = false
+      1: 
+      unless #s8::Bool goto 8 # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 36:
+      x0 = call(T::TYPE{T},xs::ForwardDiff.Dual{0,Float64})::ANY # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 37:
+      NewvarNode(:x)
+      NewvarNode(symbol("#s7"))
+      unless true goto 3
+      4:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 38:
+      x = x0 + (p::Float64 - (Distributions.cdf)(d::Distributions.Beta{Float64},x0)::UNION{ABSTRACTARRAY{T,N},FLOAT64})::ANY / (Distributions.pdf)(d::Distributions.Beta{Float64},x0)::UNION{ABSTRACTARRAY{T,N},FLOAT64}::ANY::ANY # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 39:
+      #s7 = (Distributions.abs)(x - x0::ANY)::ANY >= (Distributions.max)((Distributions.abs)(x)::ANY,(Distributions.abs)(x0)::ANY)::ANY * tol::Float64::ANY::ANY
+      unless #s7 goto 6
+      goto 7
+      6: 
+      return x
+      7:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 40:
+      x0 = x
+      5: 
+      unless false goto 4
+      3: 
+      2: 
+      return
+      goto 11
+      8:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 42:
+      ##fy#7143 = (Base.box)(Float64,(Base.sitofp)(Float64,0))
+      unless (Base.box)(Base.Bool,(Base.and_int)((Base.box)(Base.Bool,(Base.and_int)((Base.eq_float)(p::Float64,##fy#7143::Float64)::Bool,(Base.ne_float)(##fy#7143::Float64,9.223372036854776e18)::Bool)),0 === (Base.box)(Int64,(Base.fptosi)(Int64,##fy#7143::Float64))::Bool)) goto 9 # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 43:
+      return call(T::TYPE{T},0.0)::ANY
+      goto 11
+      9:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 44:
+      ##fy#7144 = (Base.box)(Float64,(Base.sitofp)(Float64,1))
+      unless (Base.box)(Base.Bool,(Base.and_int)((Base.box)(Base.Bool,(Base.and_int)((Base.eq_float)(p::Float64,##fy#7144::Float64)::Bool,(Base.ne_float)(##fy#7144::Float64,9.223372036854776e18)::Bool)),1 === (Base.box)(Int64,(Base.fptosi)(Int64,##fy#7144::Float64))::Bool)) goto 10 # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 45:
+      return call(T::TYPE{T},1.0)::ANY
+      goto 11
+      10:  # /Users/mrincredible/.julia/v0.4/Distributions/src/quantilealgs.jl, line 47:
+      return call(T::TYPE{T},Distributions.NaN)::ANY
+      11: 
+  end::ANY
+
